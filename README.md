@@ -45,7 +45,7 @@ Pastikan Anda telah menginstal:
    DB_CONNECTION=pgsql
    DB_HOST=127.0.0.1
    DB_PORT=5432
-   DB_DATABASE=your_database_name
+   DB_DATABASE=rafli_fdtest
    DB_USERNAME=your_database_user
    DB_PASSWORD=your_database_password
    ```
