@@ -90,6 +90,10 @@ MAIL_FROM_NAME="Your App Name"
    ```sh
    npm run dev
    ```
+3. akses Landing Page awal :
+    ```sh
+    http://127.0.0.1:8000/
+    ```
 
 ## Running Tests
 
