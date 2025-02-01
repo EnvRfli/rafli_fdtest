@@ -13,8 +13,8 @@ Pastikan Anda telah menginstal:
 
 1. Clone repository ini:
    ```sh
-   git clone https://github.com/username/repository-name.git
-   cd repository-name
+   git clone https://github.com/EnvRfli/rafli_fdtest.git
+   cd rafli_fdtest
    ```
 
 2. Install dependency Laravel:
