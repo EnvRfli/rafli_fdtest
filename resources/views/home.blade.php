@@ -27,9 +27,9 @@
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         @foreach ($books as $book)
         <a href="{{ route('book.details', $book->id) }}" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <img src="{{ isset($book->cover_image) ? asset('storage/' . $book->cover_image) : 'https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg' }}" 
-            alt="{{ $book->title }}" 
-            class="w-full h-48 object-cover mb-4 rounded-md">
+            <img src="{{ $book->cover_image ? asset('storage/' . $book->cover_image) : 'https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg' }}" 
+     alt="{{ $book->title }}" 
+     class="w-full h-48 object-cover mb-4 rounded-md">
                    <h2 class="text-xl font-semibold text-blue-700">{{ $book->title }}</h2>
             <p class="text-gray-600">Author: {{ $book->author }}</p>
             <p class="text-gray-600">Description: {{ Str::limit($book->description, 100) }}</p>

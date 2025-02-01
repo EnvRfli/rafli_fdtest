@@ -11,8 +11,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Gambar Cover -->
         <div class="mb-4 md:mb-0 p-6 bg-white rounded-lg shadow-md">
-            <img src={{ isset($book->cover_image) ? asset('storage/' . $book->cover_image) : 'https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg'}}
-             alt="{{ $book->title }}" class="w-full h-auto rounded-md">
+            <img src="{{ $book->cover_image ? asset('storage/' . $book->cover_image) : 'https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg' }}" 
+     alt="{{ $book->title }}"  class="w-full h-auto rounded-md">
         </div>
 
         <!-- Informasi Buku -->
