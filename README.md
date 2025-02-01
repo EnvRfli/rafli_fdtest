@@ -1,85 +1,94 @@
-# rafli_fdtest.git
- 
-Laravel Project Setup Guide 🚀
+# Laravel Project Setup
 
-Proyek ini menggunakan Laravel Breeze sebagai autentikasi, TailwindCSS dengan Vite untuk styling, PostgreSQL sebagai database, serta mendukung unit testing dan SMTP Gmail untuk email.
+## Prerequisites
 
-🛠️ Setup & Instalasi
+Pastikan Anda telah menginstal:
+- [PHP](https://www.php.net/) (versi sesuai dengan Laravel)
+- [Composer](https://getcomposer.org/)
+- [Node.js](https://nodejs.org/) & [npm](https://www.npmjs.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Git](https://git-scm.com/)
 
-1. Clone Repository
+## Installation
 
-git clone https://github.com/username/repository.git
-cd repository
+1. Clone repository ini:
+   ```sh
+   git clone https://github.com/username/repository-name.git
+   cd repository-name
+   ```
 
-2. Install Dependencies
+2. Install dependency Laravel:
+   ```sh
+   composer install
+   ```
 
-composer install
-npm install
+3. Install dependency frontend:
+   ```sh
+   npm install
+   ```
 
-3. Konfigurasi .env
+4. Copy file `.env.example` menjadi `.env`:
+   ```sh
+   cp .env.example .env
+   ```
 
-Copy file .env.example ke .env dan sesuaikan konfigurasi:
+5. Generate application key:
+   ```sh
+   php artisan key:generate
+   ```
 
-cp .env.example .env
+## Database Setup
 
-Konfigurasi Database (PostgreSQL)
+1. Buat database PostgreSQL baru.
+2. Edit file `.env` dan sesuaikan konfigurasi database:
+   ```env
+   DB_CONNECTION=pgsql
+   DB_HOST=127.0.0.1
+   DB_PORT=5432
+   DB_DATABASE=your_database_name
+   DB_USERNAME=your_database_user
+   DB_PASSWORD=your_database_password
+   ```
+3. Jalankan migrasi database:
+   ```sh
+   php artisan migrate
+   ```
 
-DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=nama_database
-DB_USERNAME=username
-DB_PASSWORD=password
+## SMTP Gmail Setup
 
-Konfigurasi SMTP Gmail
-
+Edit `.env` dan tambahkan konfigurasi berikut:
+```env
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
-MAIL_USERNAME=email@gmail.com
-MAIL_PASSWORD=app_password
+MAIL_USERNAME=your_email@gmail.com
+MAIL_PASSWORD=your_app_password
 MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=no-reply@example.com
+MAIL_FROM_ADDRESS=your_email@gmail.com
 MAIL_FROM_NAME="Your App Name"
+```
 
-📀 Note: Untuk MAIL_PASSWORD, gunakan App Password jika 2FA aktif di Gmail.
+## Running the Project
 
-4. Generate Key & Migrate Database
+1. Jalankan server backend:
+   ```sh
+   php artisan serve
+   ```
+2. Jalankan frontend dengan Vite:
+   ```sh
+   npm run dev
+   ```
 
-php artisan key:generate
-php artisan migrate --seed
+## Running Tests
 
-5. Jalankan Vite & Server Laravel
-
-npm run dev  # Menjalankan Vite (TailwindCSS)
-php artisan serve  # Menjalankan Laravel
-
-✅ Menjalankan Unit Test
-
-Pastikan database testing sudah dikonfigurasi dengan benar di .env.testing, lalu jalankan:
-
+Jalankan unit test dengan perintah:
+```sh
 php artisan test
+```
 
-📌 Fitur yang Tersedia
-
-✅ Laravel Breeze (Autentikasi & Manajemen User)
-
-🎨 TailwindCSS + Vite (Styling modern & cepat)
-
-🗄️ PostgreSQL (Database)
-
-🛠️ Unit Testing (Menggunakan PHPUnit)
-
-📧 SMTP Gmail (Untuk pengiriman email)
-
-🎯 Tech Stack
-
-Laravel 10
-
-PostgreSQL
-
-TailwindCSS
-
-Vite
-
-PHPUnit
+## Features
+- Laravel Breeze (Authentication system)
+- TailwindCSS + Vite
+- PostgreSQL database
+- Unit Testing
+- SMTP Gmail configuration
