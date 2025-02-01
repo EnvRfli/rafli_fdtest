@@ -68,16 +68,24 @@ php artisan storage:link
 
 ## SMTP Gmail Setup
 
+Dapatkan terlebih dahulu MAIL_PASSWORD dengan cara : 
+1. Buka [Google Account Security](https://myaccount.google.com/security).
+2. Aktifkan **2-Step Verification** jika belum diaktifkan.
+3. Pergi ke **App Passwords** di bagian **Signing in to Google**.
+4. Pilih **Mail** sebagai aplikasi dan **Other (Custom name)** sebagai perangkat.
+5. Masukkan nama aplikasi, lalu klik **Generate**.
+6. Salin kode yang dihasilkan dan gunakan sebagai `MAIL_PASSWORD` di `.env`.
+
 Edit `.env` dan tambahkan konfigurasi berikut:
 ```env
 MAIL_MAILER=smtp
+MAIL_SCHEME=null
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
-MAIL_USERNAME=your_email@gmail.com
+MAIL_USERNAME=your_email
 MAIL_PASSWORD=your_app_password
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=your_email@gmail.com
-MAIL_FROM_NAME="Your App Name"
+MAIL_FROM_ADDRESS="rafliagusta111@gmail.com"
+MAIL_FROM_NAME="RAFLI_FDTEST"
 ```
 
 ## Running the Project
