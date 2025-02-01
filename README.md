@@ -54,6 +54,18 @@ Pastikan Anda telah menginstal:
    php artisan migrate
    ```
 
+4. Seed database dengan data awal untuk buku:
+   ```sh
+   php artisan db:seed --class=BookSeeder
+   ```
+
+## Storage Setup
+
+Untuk memastikan file yang diunggah dapat diakses, jalankan perintah berikut:
+```sh
+php artisan storage:link
+```
+
 ## SMTP Gmail Setup
 
 Edit `.env` dan tambahkan konfigurasi berikut:
@@ -86,9 +98,16 @@ Jalankan unit test dengan perintah:
 php artisan test
 ```
 
+## Why Laravel Breeze & TailwindCSS?
+
+- **Laravel Breeze** dipilih karena menyediakan sistem autentikasi yang ringan dan mudah dikonfigurasi, termasuk login, register, reset password, dan fitur lain yang langsung dapat digunakan.
+- **TailwindCSS + Vite** digunakan untuk mempercepat pengembangan frontend dengan utility-first CSS framework yang fleksibel dan performa optimal menggunakan Vite.
+
 ## Features
 - Laravel Breeze (Authentication system)
 - TailwindCSS + Vite
 - PostgreSQL database
 - Unit Testing
 - SMTP Gmail configuration
+- Storage symlink for file access
+- Database seeder for initial book data
