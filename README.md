@@ -71,8 +71,8 @@ php artisan storage:link
 Dapatkan terlebih dahulu MAIL_PASSWORD dengan cara : 
 1. Buka [Google Account Security](https://myaccount.google.com/security).
 2. Aktifkan **2-Step Verification** jika belum diaktifkan.
-3. Pergi ke **App Passwords** di bagian **Signing in to Google**.
-4. Pilih **Mail** sebagai aplikasi dan **Other (Custom name)** sebagai perangkat.
+3. Pergi ke **App Passwords** atau **Sandi Aplikasi** di bagian **Signing in to Google** atau bisa gunakan kolom search yang tersedia.
+4. Pilih **Mail** sebagai aplikasi dan **Other (Custom name)** sebagai perangkat, **jika tidak ada menu ini, tidak apa apa, silahkan lanjutkan saja**.
 5. Masukkan nama aplikasi, lalu klik **Generate**.
 6. Salin kode yang dihasilkan dan gunakan sebagai `MAIL_PASSWORD` di `.env`.
 
